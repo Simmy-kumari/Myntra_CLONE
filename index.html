@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Myntra Clone</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header>
+        <div class="logo_container">
+            <a href="#" onclick="showHome(); return false;">
+                <img class="myntra_home" src="images/myntra_logo.webp" alt="myntra home">
+            </a>
+        </div>
+        <nav class="nav_bar">
+            <a href="#">men</a>
+            <a href="#">women</a>
+            <a href="#">kids</a>
+            <a href="#">home & living</a>
+            <a href="#">beauty</a>
+            <a href="#">studio<sup>new</sup></a>
+        </nav>
+        <div class="search_bar">
+            <i class="fa-solid fa-magnifying-glass search_icon"></i>   
+            <input class="search_input" placeholder="Search for products, brands and more">
+        </div>
+        <div class="action_bar">
+            <div class="action_container">
+                <i class="fa-regular fa-user action_icon"></i>
+                <span class="action_name">profile</span>
+            </div>
+
+            <div class="action_container">
+                <i class="fa-regular fa-heart action_icon"></i>
+                <span class="action_name">wishlist</span>
+            </div>
+
+            <div class="action_container">
+                <i class="fa-solid fa-bag-shopping action_icon"></i>
+                <span class="action_name">bag</span>
+                <span class="bag-item-count" id="bagCount">0</span>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Home Page -->
+        <div id="homePage">
+            <div class="banner_container">
+                <img class="banner_image" src="banner.jpg" alt="main banner">
+            </div>
+            
+            <div class="category_heading">Medal worthy brands to bag</div>
+            <div class="category_items" id="brandsSection">
+                <a href="#" onclick="showProducts('boohooMAN'); return false;">
+                    <img class="sales_item" src="images/1.png">
+                </a>
+                <a href="#" onclick="showProducts('Calvin Klein'); return false;">
+                    <img class="sales_item" src="images/2.png">
+                </a>
+                <a href="#" onclick="showProducts('ALDO'); return false;">
+                    <img class="sales_item" src="images/3.png">
+                </a>
+                <a href="#" onclick="showProducts('Collective Outfits'); return false;">
+                    <img class="sales_item" src="images/4.png">
+                </a>
+                <a href="#" onclick="showProducts('NAUTICA'); return false;">
+                    <img class="sales_item" src="images/5.png">
+                </a>
+                <a href="#" onclick="showProducts('Sandles'); return false;">
+                    <img class="sales_item" src="images/6.png">
+                </a>
+                <a href="#" onclick="showProducts('Shirt'); return false;">
+                    <img class="sales_item" src="images/7.png">
+                </a>
+                <a href="#" onclick="showProducts('Levis'); return false;">
+                    <img class="sales_item" src="images/8.png">
+                </a>
+                <a href="#" onclick="showProducts('Woodland'); return false;">
+                    <img class="sales_item" src="images/9.png">
+                </a>
+                <a href="#" onclick="showProducts('flats'); return false;">
+                    <img class="sales_item" src="images/10.png">
+                </a>
+            </div>
+
+            <div class="category_heading">shop by category</div>
+            <div class="category_items" id="categorySection">
+                <a href="#" onclick="showProducts('Sleepwear'); return false;">
+                    <img class="sales_item" src="images/offers/3.jpg">
+                </a>
+                <a href="#" onclick="showProducts('Footwear'); return false;">
+                    <img class="sales_item" src="images/offers/4.jpg">
+                </a>
+                <a href="#" onclick="showProducts('jewellery'); return false;">
+                    <img class="sales_item" src="images/offers/5.jpg">
+                </a>
+                <a href="#" onclick="showProducts('Ethnic Wear'); return false;">
+                    <img class="sales_item" src="images/offers/6.jpg">
+                </a>
+                <a href="#" onclick="showProducts('Workwear'); return false;">
+                    <img class="sales_item" src="images/offers/7.jpg">
+                </a>
+                <a href="#" onclick="showProducts('Handbags'); return false;">
+                    <img class="sales_item" src="images/offers/8.jpg">
+                </a>
+                <a href="#" onclick="showProducts('Innerwear'); return false;">
+                    <img class="sales_item" src="images/offers/9.jpg">
+                </a>
+                <a href="#" onclick="showProducts('Office Wear'); return false;">
+                    <img class="sales_item" src="images/offers/10.jpg">
+                </a>
+                <a href="#" onclick="showProducts('Inclusive Styles'); return false;">
+                    <img class="sales_item" src="images/offers/1.jpg">
+                </a>
+                <a href="#" onclick="showProducts('Home Decor'); return false;">
+                    <img class="sales_item" src="images/offers/2.jpg">
+                </a>
+            </div>
+        </div>
+
+        <!-- Products Page -->
+        <div id="productsPage" class="products_container">
+            <button class="back_button" onclick="showHome()">
+                <i class="fa-solid fa-arrow-left"></i> Back to Home
+            </button>
+            <div class="category_heading" id="categoryTitle">Products</div>
+            <div class="items_container" id="itemsContainer">
+                <!-- Products will be dynamically added here -->
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer_container">
+            <div class="footer_column">
+                <h3>ONLINE SHOPPING</h3>
+
+                <a href="#">Men</a>
+                <a href="#">Women</a>
+                <a href="#">Kids</a>
+                <a href="#">Home & Living</a>
+                <a href="#">Beauty</a>
+                <a href="#">Gift Card</a>
+                <a href="#">Myntra Insider</a>
+            </div>
+
+            <div class="footer_column">
+                <h3>CUSTOMER POLICIES</h3>
+
+                <a href="#">Contact Us</a>
+                <a href="#">FAQ</a>
+                <a href="#">T&C</a>
+                <a href="#">Terms Of Use</a>
+                <a href="#">Track Orders</a>
+                <a href="#">Shipping</a>
+                <a href="#">Cancellation</a>
+            </div>
+
+            <div class="footer_column">
+                <h3>USEFUL LINKS</h3>
+
+                <a href="#">Blog</a>
+                <a href="#">Careers</a>
+                <a href="#">Site Map</a>
+                <a href="#">Corporate Information</a>
+                <a href="#">Whitehat</a>
+                <a href="#">Cleartrip</a>
+            </div>
+        </div>
+        <hr>
+        <div class="copyright">
+            © 2025 www.myntra.com. All rights reserved.
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>  
